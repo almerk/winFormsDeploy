@@ -77,4 +77,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>git log -1 --pretty="%25%25h%25%25n%25%25ai%25%25n%25%25cn%25%25n%25%25B"&gt;.revisioninfo</PostBuildEvent>
+  </PropertyGroup>
 </Project>
